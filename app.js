@@ -569,7 +569,7 @@
       const s = qs.score;
       const msg = s === n ? 'Идеально. Можешь склеивать предложения с закрытыми глазами.' : s >= 5 ? 'Хорошо. Пара мутантов ещё кусается. Загляни в таблицу.' : 'Ничего страшного. Пролистай наверх ещё раз, потом вернись.';
       if (s >= 6) setTimeout(() => document.dispatchEvent(new CustomEvent('wow:confetti', { detail: { el: $('.q-score', quizEl), n: 160 } })), 250);
-      quizEl.innerHTML = `<div class="q-end"><span class="badge">Результат</span><div class="q-score">${s}/${n}</div><p>${msg}</p><button class="btn" type="button" id="q-again">Пройти ещё раз</button><a class="link-more" href="#platform" style="font-size:14px;color:var(--blue-deep);font-weight:600;text-decoration:none">Больше таких тренажёров на платформе →</a></div>`;
+      quizEl.innerHTML = `<div class="q-end"><span class="badge">Результат</span><div class="q-score">${s}/${n}</div><p>${msg}</p><button class="btn" type="button" id="q-again">Пройти ещё раз</button><a class="link-more" href="https://t.me/stellas_d/391" target="_blank" rel="noopener" style="font-size:14px;color:var(--blue-deep);font-weight:600;text-decoration:none">Больше таких тренажёров на платформе →</a></div>`;
       $('#q-again').onclick = () => { qs.i = 0; qs.score = 0; renderQuiz(); };
       return;
     }
@@ -776,7 +776,7 @@
         const r = ref.getBoundingClientRect();
         if (r.bottom < -100 || r.top > vh + 100) return;
         const c = r.top + r.height / 2 - vh / 2;
-        el.style.translate = `0 ${(c * s).toFixed(1)}px`;
+        el.style.translate = `0 ${(c * s * (innerWidth < 700 ? 0.35 : 1)).toFixed(1)}px`;
       });
       const v = y - lastY;
       skew += (Math.max(-10, Math.min(10, v * 0.35)) - skew) * 0.18;
@@ -968,4 +968,22 @@
     const cards = REV[row.dataset.rev].map(f => `<figure class="rcard"><img src="assets/reviews/${f}.jpg" alt="Отзыв ученика Stellas" loading="lazy"></figure>`).join('');
     row.innerHTML = `<div class="rev-track">${cards}${cards}</div>`;
   });
+})();
+
+/* sticky Telegram CTA: shows after the hero, hides near the final CTA */
+(() => {
+  const bar = document.getElementById('sticky-cta');
+  const hero = document.querySelector('.hero');
+  const fin = document.getElementById('final');
+  const lb = document.getElementById('lb');
+  if (!bar || !hero) return;
+  let finVisible = false;
+  new IntersectionObserver(es => { finVisible = es[0].isIntersecting; upd(); }, { threshold: 0.35 }).observe(fin);
+  function upd() {
+    const past = scrollY > hero.offsetHeight * 0.75;
+    bar.classList.toggle('show', past && !finVisible && lb.hidden);
+  }
+  addEventListener('scroll', upd, { passive: true });
+  new MutationObserver(upd).observe(lb, { attributes: true, attributeFilter: ['hidden'] });
+  upd();
 })();
