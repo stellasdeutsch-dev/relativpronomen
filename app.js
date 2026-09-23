@@ -852,7 +852,7 @@
 
   /* ---------- tilt on pointer devices ---------- */
   if (!reduce && matchMedia('(hover: hover) and (pointer: fine)').matches) {
-    $$('.feat, .pain, .pcard, .tcard, .vid-cap, .post, .stats div').forEach(el => {
+    $$('.feat, .pain, .pcard, .vid-cap, .post, .stats div, .testi-feature').forEach(el => {
       el.setAttribute('data-tilt', '');
       el.addEventListener('pointermove', e => {
         const r = el.getBoundingClientRect();
@@ -871,4 +871,101 @@
       });
     });
   }
+})();
+
+/* ============================================================
+   Real platform gallery + lightbox, review rows
+   ============================================================ */
+(() => {
+  'use strict';
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const GAL = {
+    a: [
+      ['a-home', 'Главная A0–A2: навигация, таймер, ресурсы по уровню'],
+      ['a-grammar', 'Грамматика с самых основ'],
+      ['a-articles', 'Существительные и артикли'],
+      ['a-verbs', 'Глаголы: модальные, приставки, наклонения'],
+      ['a-progress', 'Прогресс по темам с отметками'],
+      ['a-tracker', 'Трекер привычек: чтение, слушание, письмо'],
+      ['a-srs', 'Интервальные повторения слов'],
+      ['a-hospital', 'Лексика: больница, покупки и сервис'],
+      ['a-work', 'Лексика: работа и коллеги'],
+      ['a-city', 'Город, транспорт, еда и заведения'],
+      ['a-audio', 'Аудио-таблицы с транскрипцией'],
+      ['a-exams', 'Экзамены: Goethe-Zertifikat по уровням']
+    ],
+    b: [
+      ['b-home', 'Главная B1–C1'],
+      ['b-grammar-b1', 'Грамматика B1: времена, пассив, модальные'],
+      ['b-progress', 'Прогресс по грамматике B1–C1'],
+      ['b-themes', 'Темы лексики B1–C1'],
+      ['b-srs', 'Система интервальных повторений'],
+      ['b-calendar', 'Календарь для планирования учёбы'],
+      ['b-more', 'Больше материалов: тексты, диалоги, экзамены']
+    ]
+  };
+  const bento = $('#bento');
+  const gTabs = $('#gal-tabs');
+  let cur = 'a';
+  function drawGal(key, anim) {
+    cur = key;
+    bento.innerHTML = GAL[key].map(([f, cap], i) =>
+      `<button class="g-item${i === 0 ? ' big' : ''}" type="button" data-i="${i}"><img src="assets/real/${i === 0 ? '' : 't/'}${f}.jpg" alt="${cap}" loading="lazy"><span>${cap}</span></button>`).join('');
+    if (anim && !reduce) $$('.g-item', bento).forEach((el, i) => el.animate([{ opacity: 0, transform: 'translateY(18px) scale(.97)' }, { opacity: 1, transform: 'none' }], { duration: 550, delay: i * 45, easing: 'cubic-bezier(.2,.8,.2,1)', fill: 'backwards' }));
+  }
+  if (bento) {
+    drawGal('a', false);
+    gTabs.addEventListener('click', e => {
+      const b = e.target.closest('button');
+      if (!b || b.classList.contains('on')) return;
+      $$('button', gTabs).forEach(x => { x.classList.toggle('on', x === b); x.setAttribute('aria-selected', x === b); });
+      drawGal(b.dataset.g, true);
+    });
+  }
+
+  /* lightbox */
+  const lb = $('#lb'), lbImg = $('#lb-img'), lbCap = $('#lb-cap');
+  let li = 0, lastFocus = null;
+  function show(i) {
+    const list = GAL[cur];
+    li = (i + list.length) % list.length;
+    const [f, cap] = list[li];
+    lbImg.src = `assets/real/${f}.jpg`;
+    lbImg.alt = cap;
+    lbCap.textContent = `${cap} · ${li + 1}/${list.length}`;
+    if (!reduce) lbImg.animate([{ opacity: 0, transform: 'scale(.97)' }, { opacity: 1, transform: 'none' }], { duration: 350, easing: 'ease-out' });
+  }
+  function open(i) { lastFocus = document.activeElement; lb.hidden = false; document.body.style.overflow = 'hidden'; show(i); $('.lb-x', lb).focus(); }
+  function close() { lb.hidden = true; document.body.style.overflow = ''; lastFocus?.focus(); }
+  bento?.addEventListener('click', e => { const b = e.target.closest('.g-item'); if (b) open(+b.dataset.i); });
+  $('.lb-x', lb).onclick = close;
+  $('.lb-prev', lb).onclick = () => show(li - 1);
+  $('.lb-next', lb).onclick = () => show(li + 1);
+  lb.addEventListener('click', e => { if (e.target === lb) close(); });
+  addEventListener('keydown', e => {
+    if (lb.hidden) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') show(li - 1);
+    if (e.key === 'ArrowRight') show(li + 1);
+  });
+  let sx = null;
+  lb.addEventListener('pointerdown', e => { sx = e.clientX; });
+  lb.addEventListener('pointerup', e => {
+    if (sx === null) return;
+    const dx = e.clientX - sx; sx = null;
+    if (Math.abs(dx) > 50) show(li + (dx < 0 ? 1 : -1));
+  });
+
+  /* review rows */
+  const REV = {
+    1: ['r1', 'n-b1exam', 'r3', 'n-club', 'n-a2b2', 'r5', 'n-notion', 'n-big'],
+    2: ['r2', 'n-beginner', 'n-checklists', 'r4', 'n-faster', 'n-system', 'n-audio', 'r6', 'n-books']
+  };
+  $$('[data-rev]').forEach(row => {
+    const cards = REV[row.dataset.rev].map(f => `<figure class="rcard"><img src="assets/reviews/${f}.jpg" alt="Отзыв ученика Stellas" loading="lazy"></figure>`).join('');
+    row.innerHTML = `<div class="rev-track">${cards}${cards}</div>`;
+  });
 })();
