@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Relativpronomen без боли · Stellas</title>
+<meta name="description" content="Относительные местоимения в немецком: der, die, das, dessen, deren, denen, wer, was. Объяснение по шагам с анимацией, конструктор и тренажёр.">
+<meta property="og:title" content="Relativpronomen без боли">
+<meta property="og:description" content="Склеиваем немецкие предложения как вагоны. Разбор по шагам, конструктор и тренажёр.">
+<meta property="og:image" content="assets/img/p5-builder.jpg">
+<meta name="theme-color" content="#4677FF">
+<link rel="icon" href="assets/favicon.png">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&family=Instrument+Sans:wght@400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<canvas id="confetti" aria-hidden="true"></canvas>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="nav-pill">
+    <a class="brand" href="#top" aria-label="Stellas, наверх">
+      <span class="brand-logo"><img src="assets/logo.png" alt="" width="28" height="28"></span>
+      <span>Stellas</span>
+    </a>
+    <nav class="nav-links" aria-label="Разделы">
+      <a href="#about">О теме</a>
+      <a href="#merge">По шагам</a>
+      <a href="#table">Таблица</a>
+      <a href="#builder">Конструктор</a>
+      <a href="#practice">Практика</a>
+    </nav>
+    <a class="btn btn-sm" href="#platform">Платформа</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-copy">
+    <span class="badge badge-glass rv">Немецкая грамматика · A2–B1</span>
+    <h1 class="rv split" style="--d:.05s">Relativpronomen без&nbsp;боли</h1>
+    <p class="rot rv" style="--d:.1s">Сегодня в меню: <span class="rot-box" lang="de"><span class="rot-w" id="rot-w">der</span></span></p>
+    <p class="hero-sub rv" style="--d:.1s">Звучит как древнегреческий философ. На деле это просто слово «который». Разберём за 7 минут. С анимацией, чтобы даже пятилетка поняла.</p>
+    <div class="hero-cta rv" style="--d:.15s">
+      <a class="btn btn-light btn-shine" href="#about">Погнали разбирать</a>
+      <a class="link-light" href="#cheat">Сразу к шпаргалке →</a>
+    </div>
+  </div>
+
+  <div class="hero-scene">
+    <div class="hero-land" data-land="hero" data-speed=".12"></div>
+    <div class="glow glow-hero" aria-hidden="true"></div>
+    <span class="fchip fc1" data-speed="-.18" aria-hidden="true">der</span>
+    <span class="fchip fc2 fc-o" data-speed="-.26" aria-hidden="true">dessen</span>
+    <span class="fchip fc3 fc-b" data-speed="-.1" aria-hidden="true">die</span>
+    <span class="fchip fc4" data-speed="-.3" aria-hidden="true">denen</span>
+    <span class="fchip fc5 fc-g" data-speed="-.22" aria-hidden="true">das</span>
+
+    <div class="phone phone-hero rv" style="--d:.2s">
+      <div class="phone-status"><span>9:41</span><span class="st-icons"><i></i><i></i><i></i></span></div>
+      <div class="ph-banner" data-land="banner">
+        <div class="ph-greet">
+          <span class="ph-ava"><img src="assets/logo.png" alt=""></span>
+          <span><small>Привет, это Stellas</small><b>Сегодня: Relativpronomen</b></span>
+        </div>
+        <span class="ph-bell" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></span>
+      </div>
+      <div class="ph-chips">
+        <div class="ph-chip"><span class="ph-ic">🎯</span><span><small>Уровень</small><b>A2–B1</b></span></div>
+        <div class="ph-chip"><span class="ph-ic">⏱️</span><span><small>Время</small><b>7 минут</b></span></div>
+      </div>
+      <p class="ph-title">Быстрые действия</p>
+      <div class="ph-list">
+        <a href="#merge" class="ph-item"><span class="ph-ic2">🚃</span><span><b>Склейка по шагам</b><small>Смотри, как едут слова</small></span><em>+25 XP</em></a>
+        <a href="#table" class="ph-item"><span class="ph-ic2">🧬</span><span><b>Таблица форм</b><small>Найди 5 мутантов</small></span><em>+25 XP</em></a>
+        <a href="#practice" class="ph-item"><span class="ph-ic2">🏁</span><span><b>Тренажёр</b><small>8 вопросов с разбором</small></span><em>+50 XP</em></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section about" id="about">
+  <div class="wrap">
+    <span class="badge rv">О теме</span>
+    <div class="about-head">
+      <h2 class="big-split rv"><span class="blue">Relativpronomen</span> <span class="dash" aria-hidden="true"></span> <span>это «который»</span></h2>
+    </div>
+    <div class="about-cols">
+      <p class="rv">Первый месяц в Австрии я говорил как робот. <i lang="de">Meine Kollegin heißt Olga. Sie ist dreißig. Sie arbeitet viel.</i> Коллега послушала и спросила: ты телеграмму диктуешь? За каждое слово платишь?</p>
+      <p class="rv" style="--d:.08s">Тогда я и познакомился с Relativpronomen. Это <b>der, die, das</b> в роли слова «который». Они склеивают два предложения в одно. Меньше повторов. Больше смысла. И ты звучишь не как бот.</p>
+    </div>
+
+    <div class="train-card rv" data-seq="train">
+      <div class="train-scene" data-step="0">
+        <div class="train-land" data-land="train"></div>
+        <svg class="train-svg" viewBox="0 0 400 150" aria-hidden="true">
+          <g class="rail">
+            <rect x="0" y="134" width="400" height="4" fill="#5B4A3A"/>
+            <g fill="#8C6B4F"><rect x="8" y="138" width="14" height="5" rx="1"/><rect x="40" y="138" width="14" height="5" rx="1"/><rect x="72" y="138" width="14" height="5" rx="1"/><rect x="104" y="138" width="14" height="5" rx="1"/><rect x="136" y="138" width="14" height="5" rx="1"/><rect x="168" y="138" width="14" height="5" rx="1"/><rect x="200" y="138" width="14" height="5" rx="1"/><rect x="232" y="138" width="14" height="5" rx="1"/><rect x="264" y="138" width="14" height="5" rx="1"/><rect x="296" y="138" width="14" height="5" rx="1"/><rect x="328" y="138" width="14" height="5" rx="1"/><rect x="360" y="138" width="14" height="5" rx="1"/><rect x="392" y="138" width="14" height="5" rx="1"/></g>
+          </g>
+          <!-- wagon (Nebensatz) -->
+          <g class="t-wagon">
+            <rect x="214" y="72" width="170" height="54" rx="10" fill="#4677FF"/>
+            <rect x="214" y="72" width="170" height="12" rx="6" fill="#2F5FE8"/>
+            <rect x="226" y="90" width="40" height="22" rx="5" fill="#E7EFFF"/>
+            <rect x="274" y="90" width="40" height="22" rx="5" fill="#E7EFFF"/>
+            <rect x="322" y="90" width="50" height="22" rx="5" fill="#E7EFFF" class="tail-slot"/>
+            <text x="246" y="105" class="tw">Olga</text>
+            <circle cx="240" cy="130" r="9" fill="#1F2A24"/><circle cx="240" cy="130" r="3.5" fill="#CFD6DE"/>
+            <circle cx="358" cy="130" r="9" fill="#1F2A24"/><circle cx="358" cy="130" r="3.5" fill="#CFD6DE"/>
+            <text x="299" y="66" class="tl">Nebensatz</text>
+            <g class="t-verb">
+              <rect x="322" y="90" width="50" height="22" rx="5" fill="#2A5945"/>
+              <text x="347" y="105" class="tw tw-w">heißt</text>
+            </g>
+          </g>
+          <!-- loco (Hauptsatz) -->
+          <g class="t-loco">
+            <rect x="16" y="58" width="44" height="68" rx="8" fill="#D95A05"/>
+            <rect x="24" y="66" width="28" height="22" rx="4" fill="#FFF1DA"/>
+            <rect x="56" y="80" width="140" height="46" rx="10" fill="#F46907"/>
+            <rect x="150" y="62" width="14" height="20" rx="3" fill="#2A2A2A"/>
+            <rect x="70" y="92" width="112" height="22" rx="5" fill="#FFE8D2"/>
+            <text x="126" y="107" class="tw">Meine Kollegin</text>
+            <circle cx="46" cy="130" r="10" fill="#1F2A24"/><circle cx="46" cy="130" r="4" fill="#CFD6DE"/>
+            <circle cx="100" cy="130" r="9" fill="#1F2A24"/><circle cx="100" cy="130" r="3.5" fill="#CFD6DE"/>
+            <circle cx="170" cy="130" r="9" fill="#1F2A24"/><circle cx="170" cy="130" r="3.5" fill="#CFD6DE"/>
+            <text x="106" y="52" class="tl">Hauptsatz</text>
+            <g class="smoke"><circle cx="157" cy="54" r="6" fill="#fff"/><circle cx="165" cy="44" r="8" fill="#fff" opacity=".8"/><circle cx="176" cy="34" r="10" fill="#fff" opacity=".6"/></g>
+          </g>
+          <!-- coupler -->
+          <g class="t-coupler">
+            <rect x="194" y="112" width="22" height="7" rx="3" fill="#2A2A2A"/>
+            <rect x="182" y="30" width="46" height="26" rx="13" fill="#fff" stroke="#F46907" stroke-width="2"/>
+            <text x="205" y="48" class="tw tw-o">die</text>
+            <path d="M205 58 V108" stroke="#F46907" stroke-width="2" stroke-dasharray="3 4"/>
+          </g>
+        </svg>
+      </div>
+      <div class="seq-ui">
+        <p class="seq-cap" aria-live="polite"></p>
+        <div class="seq-ctrl"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RULES (features) ============ -->
+<section class="section rules" id="rules">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="badge rv">Три правила</span>
+      <h2 class="rv">Всё держится на&nbsp;трёх китах</h2>
+    </div>
+    <div class="feat-grid">
+      <article class="feat feat-green rv">
+        <div class="feat-ill" data-land="f1">
+          <div class="ov ov-family">
+            <span class="chip-w">die Frau</span>
+            <svg class="ov-arrow" viewBox="0 0 60 20"><path d="M2 10 H52 M44 3 L54 10 L44 17" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-dasharray="4 5"/></svg>
+            <span class="chip-o">die</span>
+          </div>
+        </div>
+        <div class="feat-body">
+          <h3>Род и число берёт у папы</h3>
+          <p>Смотришь на существительное, к которому цепляешься. <b lang="de">der Mann → der</b>. <b lang="de">die Frau → die</b>. <b lang="de">das Kind → das</b>. Копия один в один.</p>
+        </div>
+      </article>
+      <article class="feat feat-blue rv" style="--d:.08s">
+        <div class="feat-ill" data-land="f2">
+          <div class="ov ov-cases"><span>Nom</span><span>Akk</span><span>Dat</span><span>Gen</span></div>
+        </div>
+        <div class="feat-body">
+          <h3>Падеж выбирает сам</h3>
+          <p>А вот падеж папа не решает. Он зависит от работы местоимения в своём предложении. Кого встретил? Akkusativ. Кому помог? Dativ.</p>
+        </div>
+      </article>
+      <article class="feat feat-peach rv" style="--d:.16s">
+        <div class="feat-ill" data-land="f3">
+          <div class="ov ov-tail">
+            <span class="chip-w" lang="de">…, die Olga</span><span class="chip-g" lang="de">heißt</span>
+          </div>
+        </div>
+        <div class="feat-body">
+          <h3>Глагол уходит в хвост</h3>
+          <p>В придаточном глагол всегда в конце. <b lang="de">…, die Olga heißt.</b> Поставишь в середину, и немцы сделают вид, что не услышали.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+  <div class="wave" aria-hidden="true"></div>
+</section>
+
+<!-- ============ MERGE STEPPER ============ -->
+<section class="section merge sky-soft" id="merge">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="badge rv">Как это работает</span>
+      <h2 class="rv">Склейка за&nbsp;5&nbsp;шагов</h2>
+      <p class="lead rv">Жми «Дальше» или просто смотри. Каждое слово едет на своё место.</p>
+    </div>
+    <div class="stepper-card rv" data-seq="olga">
+      <div class="st-stage" lang="de"></div>
+      <p class="st-ru"></p>
+      <div class="seq-ui">
+        <p class="seq-cap" aria-live="polite"></p>
+        <div class="seq-ctrl"></div>
+      </div>
+    </div>
+    <div class="legend rv">
+      <span><i class="lg lg-n"></i>существительное</span>
+      <span><i class="lg lg-p"></i>Relativpronomen</span>
+      <span><i class="lg lg-v"></i>глагол</span>
+      <span><i class="lg lg-pr"></i>предлог</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TABLE ============ -->
+<section class="section table-sec" id="table">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="badge rv">Таблица форм</span>
+      <h2 class="rv">Близнецы артиклей. Почти.</h2>
+      <p class="lead rv">Хорошая новость. Relativpronomen склоняются как определённый артикль. Выучил артикли, значит уже знаешь 11 форм из 16. Плохая новость. Пять форм мутировали. Все в Genitiv и одна в Dativ множественного.</p>
+      <div class="stats rv">
+        <div><b data-count="16">0</b><span>форм всего</span></div>
+        <div><b data-count="11">0</b><span>как у артикля</span></div>
+        <div class="st-o"><b data-count="5">0</b><span>мутантов</span></div>
+      </div>
+    </div>
+
+    <div class="tabs seg rv" role="tablist" data-morph>
+      <button role="tab" aria-selected="true" class="on" data-mode="art">Артикль</button>
+      <button role="tab" aria-selected="false" data-mode="rel">Relativpronomen</button>
+    </div>
+
+    <div class="rtable-card rv">
+      <div class="rtable" id="rtable" lang="de"></div>
+      <p class="rtable-note"><i class="lg lg-o"></i> оранжевые это мутанты: <b>dessen, deren, denen</b></p>
+    </div>
+
+    <div class="finder rv" data-seq="finder">
+      <div class="finder-top">
+        <span class="badge">Найди форму за 3 шага</span>
+        <p class="finder-q" lang="de">Die Frau, <span class="blank" id="finder-blank">___</span> ich geholfen habe, ist nett.</p>
+      </div>
+      <div class="seq-ui">
+        <p class="seq-cap" aria-live="polite"></p>
+        <div class="seq-ctrl"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ribbons" aria-hidden="true" data-ribbon="de"></div>
+
+<!-- ============ BUILDER (knowledge hub) ============ -->
+<section class="section hub" id="builder">
+  <div class="glow glow-hub" aria-hidden="true"></div>
+  <div class="hub-clouds" aria-hidden="true"><span class="cl cl1"></span><span class="cl cl2"></span><span class="cl cl3"></span></div>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="badge rv">Конструктор</span>
+      <h2 class="rv">Собери своё предложение</h2>
+      <p class="lead lead-w rv">Выбери папу и работу. Остальное сделает немецкий.</p>
+    </div>
+
+    <div class="hub-grid">
+      <div class="hub-side hub-left">
+        <button class="case-card rv" data-case="nom"><b>Nominativ</b><small>Кто? Делает сам</small><span class="bar"><i style="--w:30%;--c:#F2C94C"></i></span><em>der · die · das · die</em></button>
+        <button class="case-card rv" data-case="akk"><b>Akkusativ</b><small>Кого? Что?</small><span class="bar"><i style="--w:55%;--c:#7DB46C"></i></span><em>den · die · das · die</em></button>
+      </div>
+
+      <div class="phone phone-hub rv">
+        <div class="phone-status"><span>9:41</span><span class="st-icons"><i></i><i></i><i></i></span></div>
+        <div class="cb">
+          <p class="cb-label">Кто папа?</p>
+          <div class="cb-chips" id="cb-noun">
+            <button data-n="m" class="on">der Mann</button>
+            <button data-n="f">die Frau</button>
+            <button data-n="n">das Kind</button>
+            <button data-n="pl">die Leute</button>
+          </div>
+          <p class="cb-label">Какая работа в вагоне?</p>
+          <div class="cb-chips" id="cb-case">
+            <button data-c="nom" class="on">поёт сам</button>
+            <button data-c="akk">я встретил</button>
+            <button data-c="dat">я помог</button>
+            <button data-c="gen">чья собака</button>
+          </div>
+          <div class="cb-result">
+            <div class="cb-pron" id="cb-pron" lang="de">der</div>
+            <div class="cb-tags"><span id="cb-g">maskulin</span><span id="cb-k">Nominativ</span></div>
+          </div>
+          <p class="cb-why" id="cb-why"></p>
+          <div class="cb-sent">
+            <p lang="de" id="cb-de"></p>
+            <p class="cb-ru" id="cb-ru"></p>
+            <button class="hoeren" id="cb-say" type="button"><svg viewBox="0 0 24 24"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a10 10 0 0 1 0 14"/></svg>Hören</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="hub-side hub-right">
+        <button class="case-card rv" data-case="dat"><b>Dativ</b><small>Кому? С кем?</small><span class="bar"><i style="--w:70%;--c:#F46907"></i></span><em>dem · der · dem · <u>denen</u></em></button>
+        <button class="case-card rv" data-case="gen"><b>Genitiv</b><small>Чей?</small><span class="bar"><i style="--w:45%;--c:#4677FF"></i></span><em><u>dessen · deren · dessen · deren</u></em></button>
+      </div>
+    </div>
+  </div>
+  <div class="hub-land" data-land="hub"></div>
+</section>
+
+<!-- ============ PREPOSITIONS ============ -->
+<section class="section prep" id="prep">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="badge rv">Предлоги</span>
+      <h2 class="rv">Предлог едет вместе с&nbsp;местоимением</h2>
+      <p class="lead rv">Если у глагола есть предлог, он прыгает в начало придаточного. Прямо перед der, die, das. Они как сиамские близнецы. Разлучить нельзя.</p>
+    </div>
+    <div class="stepper-card rv" data-seq="gaeste">
+      <div class="st-stage" lang="de"></div>
+      <p class="st-ru"></p>
+      <div class="seq-ui">
+        <p class="seq-cap" aria-live="polite"></p>
+        <div class="seq-ctrl"></div>
+      </div>
+    </div>
+
+    <div class="ex-grid">
+      <div class="ex rv"><p lang="de">Die Stadt, <b>in der</b> ich wohne, ist klein.</p><small>Город, в котором я живу, маленький.</small><button class="say" data-say="Die Stadt, in der ich wohne, ist klein." aria-label="Послушать"></button></div>
+      <div class="ex rv" style="--d:.05s"><p lang="de">Der Freund, <b>mit dem</b> ich arbeite, kommt aus Wien.</p><small>Друг, с которым я работаю, из Вены.</small><button class="say" data-say="Der Freund, mit dem ich arbeite, kommt aus Wien." aria-label="Послушать"></button></div>
+      <div class="ex rv" style="--d:.1s"><p lang="de">Das ist meine Oma, <b>für die</b> ich immer sorge.</p><small>Это моя бабушка, о которой я всегда забочусь.</small><button class="say" data-say="Das ist meine Oma, für die ich immer sorge." aria-label="Послушать"></button></div>
+      <div class="ex rv" style="--d:.15s"><p lang="de">Die Kollegen, <b>von denen</b> ich erzählt habe, sind da.</p><small>Коллеги, о которых я рассказывал, пришли.</small><button class="say" data-say="Die Kollegen, von denen ich erzählt habe, sind da." aria-label="Послушать"></button></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WER / WAS (blog) ============ -->
+<section class="section blog" id="special">
+  <div class="wrap">
+    <div class="blog-head">
+      <div>
+        <span class="badge rv">Особые случаи</span>
+        <h2 class="rv">wer, was, welcher и&nbsp;«чей»</h2>
+        <p class="lead lead-left rv">Иногда папы нет вообще. Иногда он в пиджаке. А иногда надо сказать «чей».</p>
+      </div>
+      <div class="tabs pills rv" role="tablist" id="blog-tabs">
+        <button role="tab" class="on" aria-selected="true" data-t="wer">wer</button>
+        <button role="tab" aria-selected="false" data-t="was">was</button>
+        <button role="tab" aria-selected="false" data-t="dessen">dessen</button>
+        <button role="tab" aria-selected="false" data-t="welcher">welcher</button>
+      </div>
+    </div>
+
+    <article class="post rv" id="post">
+      <div class="post-ill" data-land="post"><div class="post-word" id="post-word" lang="de">wer</div></div>
+      <div class="post-body">
+        <span class="pill-mini">Insight</span>
+        <h3 id="post-title"></h3>
+        <p id="post-text"></p>
+        <ul class="post-ex" id="post-ex"></ul>
+        <div class="post-meta">
+          <span class="meta"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span id="post-lvl">B1</span></span>
+          <span class="meta"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>1 мин</span>
+          <button class="btn btn-xs" id="post-say" type="button">Hören <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ MISTAKES (FAQ) ============ -->
+<section class="section faq-sec" id="mistakes">
+  <span class="leaf leaf-1" aria-hidden="true"></span>
+  <span class="leaf leaf-2" aria-hidden="true"></span>
+  <div class="wrap">
+    <div class="faq-card rv">
+      <div class="section-head">
+        <span class="badge">Частые ошибки</span>
+        <h2>Тут ошибаются почти все</h2>
+        <p class="lead">Я на каждой из этих граблей стоял. Лично. Лбом.</p>
+      </div>
+      <div class="faq">
+        <details open><summary>Почему dem, если Mann это der?</summary><div class="ans"><p>Потому что род ты берёшь у папы, а падеж нет. <b lang="de">Der Mann, dem ich geholfen habe.</b> helfen требует Dativ. Мужской род + Dativ = dem.</p></div></details>
+        <details><summary>Можно поставить глагол в середину?</summary><div class="ans"><p>Нет. <s lang="de">…, die heißt Olga</s> это ошибка. <b lang="de">…, die Olga heißt</b> правильно. Если глаголов два, спрягаемый встаёт самым последним: <b lang="de">…, den ich gesehen habe.</b></p></div></details>
+        <details><summary>Запятые правда обязательны?</summary><div class="ans"><p>Да. Придаточное всегда отделяется запятыми. Стоит в середине? Запятая до и после. Это не русский, где можно на глаз.</p></div></details>
+        <details><summary>Die Gäste, die wir warten auf?</summary><div class="ans"><p>Предлог никогда не остаётся в хвосте. Он едет в начало вместе с местоимением: <b lang="de">Die Gäste, auf die wir warten.</b></p></div></details>
+        <details><summary>Почему denen, а не den?</summary><div class="ans"><p>Dativ множественного это мутант. Артикль <b>den</b>, а местоимение <b>denen</b>. <b lang="de">Die Leute, mit denen ich arbeite.</b></p></div></details>
+        <details><summary>das или was?</summary><div class="ans"><p><b>das</b>, когда есть конкретное существительное среднего рода: <b lang="de">das Buch, das ich lese.</b> <b>was</b> после alles, nichts, etwas, das и превосходной степени: <b lang="de">alles, was ich weiß.</b></p></div></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRACTICE ============ -->
+<section class="section practice sky-soft" id="practice">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="badge rv">Практика</span>
+      <h2 class="rv">Проверь себя</h2>
+      <p class="lead rv">8 вопросов. Ошибся? Сразу объясню почему. Потом собери фразу руками.</p>
+    </div>
+
+    <div class="practice-grid">
+      <div class="quiz rv" id="quiz" lang="ru"></div>
+
+      <div class="sb rv" id="sb">
+        <div class="sb-head">
+          <h3>Sentence Builder</h3>
+          <p>Собери фразу правильно</p>
+        </div>
+        <p class="sb-ru" id="sb-ru"></p>
+        <div class="sb-zone" id="sb-zone" lang="de" aria-label="Твоя фраза"></div>
+        <div class="sb-bank" id="sb-bank" lang="de"></div>
+        <p class="sb-msg" id="sb-msg" aria-live="polite"></p>
+        <div class="sb-btns">
+          <button class="btn-gray" id="sb-reset" type="button">Сброс</button>
+          <button class="btn-blue" id="sb-check" type="button">Проверить</button>
+        </div>
+        <button class="sb-next" id="sb-next" type="button">Следующая фраза →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHEAT SHEET ============ -->
+<section class="section cheat" id="cheat">
+  <div class="cheat-sun" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="cheat-card rv">
+      <div class="cheat-top">
+        <span class="badge">Шпаргалка</span>
+        <h2>Короткая шпаргалка</h2>
+        <p>Сохрани скрином. Проверь себя на своих примерах.</p>
+      </div>
+      <ul class="cheat-list">
+        <li><b>Род и число</b><span>→</span><em>от существительного</em></li>
+        <li><b>Падеж</b><span>→</span><em>от работы в придаточном</em></li>
+        <li><b>Глагол</b><span>→</span><em>в самый конец</em></li>
+        <li><b>Предлог</b><span>→</span><em>перед der / die / das</em></li>
+        <li><b>Чей?</b><span>→</span><em lang="de">dessen / deren</em></li>
+        <li><b>Dativ мн.</b><span>→</span><em lang="de">denen</em></li>
+        <li><b>Нет существительного</b><span>→</span><em lang="de">wer / was</em></li>
+      </ul>
+      <p class="cheat-quote">Главное не зубри таблицу. Склей десять своих предложений. Таблица запомнится сама.</p>
+    </div>
+    <div class="cheat-mount" data-land="cheat" aria-hidden="true"></div>
+  </div>
+</section>
+
+<div class="ribbons ribbons-ad" aria-hidden="true" data-ribbon="ad"></div>
+
+<!-- =====================================================
+     PLATFORM AD
+====================================================== -->
+<section class="section dl" id="platform">
+  <div class="dl-land" data-land="dl"></div>
+  <div class="wrap dl-grid">
+    <div class="dl-copy">
+      <span class="badge rv">Stellas · платформа A0–C1</span>
+      <h2 class="rv">Прочитал. Понял. Через три дня забыл.</h2>
+      <p class="rv">Со мной так было сто раз. Статья объясняет правило. Но не заставляет его использовать. А язык живёт не в голове. Он живёт в ушах, в руках и во рту. Поэтому мы сделали Stellas.</p>
+      <div class="dl-cta rv">
+        <a class="btn btn-shine" href="#inside">Смотреть, что внутри</a>
+        <span class="price-hint">от 20 € · навсегда</span>
+      </div>
+    </div>
+    <div class="phone phone-dl rv">
+      <video class="lazy-video" muted loop playsinline preload="none" poster="assets/video/words-app.jpg" aria-label="Тренажёр слов Stellas"><source data-src="assets/video/words-app.mp4" type="video/mp4"></video>
+    </div>
+  </div>
+</section>
+
+<section class="section pains" id="pains">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="badge rv">Знакомо?</span>
+      <h2 class="rv">Почему немецкий не&nbsp;липнет</h2>
+      <p class="lead rv">Дело не в тебе. Дело в том, как ты его учишь.</p>
+    </div>
+    <div class="pain-grid">
+      <article class="pain pain-peach rv">
+        <span class="pain-emoji">🗂️</span>
+        <h3>Вкладочный ад</h3>
+        <p class="pain-p">Правило на одном сайте. Упражнение на другом. Ответы в комментариях на третьем. Двадцать вкладок и ноль системы.</p>
+        <p class="pain-fix"><b>На Stellas</b> всё лежит по полочкам от A0 до C1. Закрыл один гайд, открыл следующий. Не думаешь, что учить дальше.</p>
+      </article>
+      <article class="pain pain-blue rv" style="--d:.05s">
+        <span class="pain-emoji">🤷</span>
+        <h3>Проверить некому</h3>
+        <p class="pain-p">Сделал упражнение. А правильно или нет? Учебник молчит. Репетитор стоит как крыло самолёта.</p>
+        <p class="pain-fix"><b>На Stellas</b> ответы с разбором в каждом гайде. В интерактивных гайдах приложение само подсвечивает ошибку и объясняет, почему так.</p>
+      </article>
+      <article class="pain pain-green rv" style="--d:.1s">
+        <span class="pain-emoji">🏥</span>
+        <h3>Учебник не звонит врачу</h3>
+        <p class="pain-p">Учебник учит <i lang="de">Das ist ein Hund</i>. А тебе надо записаться к врачу, пережить JobCenter и вернуть товар на кассе.</p>
+        <p class="pain-fix"><b>На Stellas</b> отдельные блоки под реальную жизнь: больница, аптека, касса, транспорт, работа. Слова, которые понадобятся завтра.</p>
+      </article>
+      <article class="pain pain-yellow rv" style="--d:.15s">
+        <span class="pain-emoji">🎲</span>
+        <h3>der, die или das? Угадайка</h3>
+        <p class="pain-p">Не знаешь артикль, не выберешь Relativpronomen. Не выберешь местоимение, не построишь фразу. Домино.</p>
+        <p class="pain-fix"><b>На Stellas</b> артикли живут семьёй: Herr Der, Frau Die и Baby Das. Плюс тренажёр слов, где каждый артикль своего цвета.</p>
+      </article>
+      <article class="pain pain-white rv" style="--d:.2s">
+        <span class="pain-emoji">💸</span>
+        <h3>Подписка, которая ест деньги</h3>
+        <p class="pain-p">Приложения списывают деньги каждый месяц. Даже когда ты не заходил с Рождества.</p>
+        <p class="pain-fix"><b>На Stellas</b> платишь один раз. Доступ навсегда. Обновления для купивших бесплатные.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section inside sky-soft" id="inside">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="badge rv">Внутри платформы</span>
+      <h2 class="rv">Не читать про немецкий. Трогать его&nbsp;руками.</h2>
+    </div>
+    <div class="tabs pills pills-scroll rv" role="tablist" id="vid-tabs">
+      <button role="tab" class="on" aria-selected="true" data-v="0">Интерактивный гайд</button>
+      <button role="tab" aria-selected="false" data-v="1">Тесты с разбором</button>
+      <button role="tab" aria-selected="false" data-v="2">Семья артиклей</button>
+      <button role="tab" aria-selected="false" data-v="3">Лексика для жизни</button>
+      <button role="tab" aria-selected="false" data-v="4">Грамматика по порядку</button>
+    </div>
+    <div class="vid-stage rv">
+      <div class="laptop">
+        <video id="vid-main" muted loop playsinline preload="none" poster="assets/video/gemini-guide.jpg"><source src="assets/video/gemini-guide.mp4" type="video/mp4"></video>
+      </div>
+      <div class="vid-cap">
+        <span class="pill-mini">Stellas</span>
+        <h3 id="vid-title">Интерактивный гайд</h3>
+        <p id="vid-text"></p>
+      </div>
+    </div>
+
+    <div class="shots-head rv">
+      <h3>Скрины платформы</h3>
+      <p>Листай вбок →</p>
+    </div>
+    <div class="shots" id="shots">
+      <figure class="shot"><img loading="lazy" src="assets/img/p1-home.jpg" alt="Главная страница платформы Stellas A0–A2" width="1200" height="784"><figcaption>Главная: навигация, таймер, ресурсы по уровню</figcaption></figure>
+      <figure class="shot"><img loading="lazy" src="assets/img/p2-guides.jpg" alt="Список гайдов по грамматике" width="1200" height="784"><figcaption>Грамматика с самых основ</figcaption></figure>
+      <figure class="shot"><img loading="lazy" src="assets/img/p3-guide.jpg" alt="Раздел местоимений" width="1200" height="784"><figcaption>Местоимения, существительные, артикли</figcaption></figure>
+      <figure class="shot"><img loading="lazy" src="assets/img/p4-words.jpg" alt="Карточки слов с озвучкой" width="1200" height="565"><figcaption>Карточки слов с кнопкой Hören</figcaption></figure>
+      <figure class="shot"><img loading="lazy" src="assets/img/p5-builder.jpg" alt="Sentence Builder" width="1200" height="565"><figcaption>Sentence Builder: собери фразу</figcaption></figure>
+      <figure class="shot"><img loading="lazy" src="assets/img/p6-tracker.jpg" alt="Трекер привычек" width="1200" height="784"><figcaption>Трекер: чтение, слушание, письмо</figcaption></figure>
+      <figure class="shot"><img loading="lazy" src="assets/img/p7-work.jpg" alt="Лексика: работа и документы" width="1200" height="784"><figcaption>Работа, документы, госорганы</figcaption></figure>
+      <figure class="shot"><img loading="lazy" src="assets/img/p8-situations.jpg" alt="Лексика: больница и покупки" width="1200" height="814"><figcaption>Больница, покупки, сервис</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section testi" id="reviews">
+  <div class="wrap testi-grid">
+    <div class="testi-copy">
+      <span class="badge rv">Реальные отзывы</span>
+      <h2 class="rv">Что говорят ученики</h2>
+      <p class="rv">Скрины как есть. Мы ничего не редактировали, только спрятали аватарки.</p>
+      <a class="btn rv" href="#price">Хочу так же</a>
+    </div>
+    <div class="testi-masonry">
+      <figure class="tcard t-peach rv"><img loading="lazy" src="assets/reviews/r1.jpg" alt="Отзыв: всё удобно и понятно, уроки хорошо структурированы" width="900" height="274"></figure>
+      <figure class="tcard t-blue rv"><img loading="lazy" src="assets/reviews/r2.jpg" alt="Отзыв: удобное и грамотно выстроенное приложение" width="900" height="200"></figure>
+      <figure class="tcard t-green rv"><img loading="lazy" src="assets/reviews/r3.jpg" alt="Отзыв: платформа очень помогла в изучении языка" width="900" height="357"></figure>
+      <figure class="tcard t-blue rv"><img loading="lazy" src="assets/reviews/r4.jpg" alt="Отзыв: всё структурировано, ярко и понятно" width="900" height="241"></figure>
+      <figure class="tcard t-peach rv"><img loading="lazy" src="assets/reviews/r5.jpg" alt="Отзыв: и скорость, и результат, и удовольствие" width="900" height="689"></figure>
+      <figure class="tcard t-green rv"><img loading="lazy" src="assets/reviews/r6.jpg" alt="Отзыв: платформа всегда под рукой, даже если есть 5 минут" width="900" height="392"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="section price sky-soft" id="price">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="badge rv">Цена</span>
+      <h2 class="rv">Один раз. Навсегда.</h2>
+      <p class="lead rv">Меньше, чем пара занятий с репетитором. Только остаётся с тобой насовсем.</p>
+    </div>
+    <div class="price-grid">
+      <div class="pcard rv">
+        <span class="pcard-lvl">A0–A2</span>
+        <p class="pcard-who">Для тех, кто с нуля</p>
+        <p class="pcard-price">20 €</p>
+        <ul><li>От алфавита до A2</li><li>Грамматика + упражнения с разбором</li><li>Лексика для жизни в Германии</li></ul>
+        <a class="btn btn-outline" href="https://app.lava.top/801303618?tabId=products&amp;sort=published" target="_blank" rel="noopener">Выбрать</a>
+      </div>
+      <div class="pcard pcard-hot rv" style="--d:.06s">
+        <span class="pcard-flag">Выгоднее всего</span>
+        <span class="pcard-lvl">A0–C1</span>
+        <p class="pcard-who">Весь путь целиком</p>
+        <p class="pcard-price">30 € <s>40 €</s></p>
+        <ul><li>Обе платформы сразу</li><li>Все будущие обновления бесплатно</li><li>A0–A2 на украинском в подарок</li></ul>
+        <a class="btn btn-shine" href="https://app.lava.top/801303618?tabId=products&amp;sort=published" target="_blank" rel="noopener">Забрать за 30 €</a>
+      </div>
+      <div class="pcard rv" style="--d:.12s">
+        <span class="pcard-lvl">B1–C1</span>
+        <p class="pcard-who">Для тех, кто уже в теме</p>
+        <p class="pcard-price">20 €</p>
+        <ul><li>Придаточные, Konjunktiv, сложная грамматика</li><li>Интерактивные гайды с проверкой</li><li>Лексика под экзаменационные темы</li></ul>
+        <a class="btn btn-outline" href="https://app.lava.top/801303618?tabId=products&amp;sort=published" target="_blank" rel="noopener">Выбрать</a>
+      </div>
+    </div>
+
+    <div class="faq faq-plat rv">
+      <details><summary>Это подписка?</summary><div class="ans"><p>Нет. Платишь один раз, доступ остаётся навсегда. Все обновления для купивших бесплатные.</p></div></details>
+      <details><summary>Я с нуля. Мне подойдёт?</summary><div class="ans"><p>Да. Бери A0–A2. Там всё начинается с алфавита и правил чтения. Никаких прыжков через голову.</p></div></details>
+      <details><summary>С телефона можно?</summary><div class="ans"><p>Да. Платформа сделана в Notion. Открывается и с телефона, и с ноутбука. Пять минут в трамвае тоже считаются.</p></div></details>
+      <details><summary>Остались вопросы</summary><div class="ans"><p>Пиши в личку <a href="https://t.me/stellasdeutsch" target="_blank" rel="noopener">@stellasdeutsch</a>. Отвечаем живые люди, не бот.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="section final" id="final">
+  <div class="final-land" data-land="final"></div>
+  <div class="wrap final-grid">
+    <div class="final-copy">
+      <span class="badge rv">Твой немецкий в одном месте</span>
+      <h2 class="rv">Хватит собирать немецкий по&nbsp;кусочкам</h2>
+      <p class="rv">Всё по порядку. С проверкой. С озвучкой. Один раз заплатил, и учишь столько, сколько нужно.</p>
+      <a class="btn btn-shine rv" href="https://app.lava.top/801303618?tabId=products&amp;sort=published" target="_blank" rel="noopener">Забрать A0–C1 за 30 €</a>
+    </div>
+    <div class="hand-phone rv">
+      <div class="phone phone-final">
+        <div class="phone-status"><span>9:41</span><span class="st-icons"><i></i><i></i><i></i></span></div>
+        <div class="pf-logo"><img src="assets/logo.png" alt=""><span>Stellas</span></div>
+        <h3>Welcome to<br>Stellas Deutsch</h3>
+        <p>Грамматика, лексика и практика. От A0 до C1.</p>
+        <div class="pf-land" data-land="pf"></div>
+        <a class="pf-btn" href="https://app.lava.top/801303618?tabId=products&amp;sort=published" target="_blank" rel="noopener">Get Started</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <a class="brand" href="#top"><span class="brand-logo"><img src="assets/logo.png" alt="" width="28" height="28"></span><span>Stellas</span></a>
+    <nav>
+      <a href="https://t.me/stellas_d" target="_blank" rel="noopener">Канал в Telegram</a>
+      <a href="https://t.me/stellasdeutsch" target="_blank" rel="noopener">Написать в личку</a>
+      <a href="https://app.lava.top/801303618?tabId=products&amp;sort=published" target="_blank" rel="noopener">Купить платформу</a>
+    </nav>
+    <p>Сделано с любовью к немецкому и лёгкой ненавистью к таблицам склонения. © 2026 Stellas</p>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>
