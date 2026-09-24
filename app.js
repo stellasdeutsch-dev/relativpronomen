@@ -927,7 +927,9 @@
   }
 
   /* lightbox */
-  const lb = $('#lb'), lbImg = $('#lb-img'), lbCap = $('#lb-cap');
+  const lb = $('#lb');
+  if (lb) {
+  const lbImg = $('#lb-img'), lbCap = $('#lb-cap');
   let li = 0, lastFocus = null;
   function show(i) {
     const list = GAL[cur];
@@ -958,6 +960,7 @@
     const dx = e.clientX - sx; sx = null;
     if (Math.abs(dx) > 50) show(li + (dx < 0 ? 1 : -1));
   });
+  }
 
   /* review rows */
   const REV = {
